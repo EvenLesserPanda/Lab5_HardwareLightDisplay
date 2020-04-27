@@ -43,7 +43,7 @@ checkResult
 test "PINA: 0xFF => PORTC: 1"
 setPINA 0xFE
 continue 5
-stPINA 0xFE
+setPINA 0xFE
 continue 5
 setPINA 0xFF
 continue 5
