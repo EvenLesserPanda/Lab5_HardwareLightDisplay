@@ -26,40 +26,40 @@
 echo ======================================================\n
 echo Running all tests..."\n\n
 
-test "PINA: 0xFE => PORTC: 1"
+test "PINA: 0xFE => PORTB: 0x01"
 setPINA 0xFE
 continue 5
-expectPORTC 0x01
+expectPORTB 0x01
 checkResult
 
-test "PINA: 0xFE => PORTC: 1"
-setPINA 0xFE
-continue 5
-setPINA 0xFE
-continue 5
-expectPORTC 0x01
-checkResult
-
-test "PINA: 0xFF => PORTC: 1"
-setPINA 0xFE
-continue 5
+test "PINA: 0xFE => PORTB: 0x01"
 setPINA 0xFE
 continue 5
 setPINA 0xFF
 continue 5
-expectPORTC 0x01
+expectPORTB 0x01
 checkResult
 
-test "PINA: 0xFD => PORTC: 0"
+test "PINA: 0xFE => PORTB: 0x21"
 setPINA 0xFE
-continue 5
-stPINA 0xFE
 continue 5
 setPINA 0xFF
 continue 5
-setPINA 0xFD
+setPINA 0xFE
 continue 5
-expectPORTC 0x00
+expectPORTB 0x21
+checkResult
+
+test "PINA: 0xFD => PORTB: 0x21"
+setPINA 0xFE
+continue 5
+setPINA 0xFF
+continue 5
+setPINA 0xFE
+continue 5
+setPINA 0xFE
+continue 5
+expectPORTB 0x21
 checkResult
 
 # Report on how many tests passed/tests ran
