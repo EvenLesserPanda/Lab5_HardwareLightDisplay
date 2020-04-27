@@ -8,7 +8,7 @@
  *	code, is my own original work.
  */
 
-// Demo: link_to_video.com
+// Demo: https://youtu.be/B-Cdg8MwzfY
 
 #include <avr/io.h>
 #ifdef _SIMULATE_
